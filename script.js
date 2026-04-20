@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+const { useState, useCallback } = React;
 
 // ── Skinfold configs ──────────────────────────────────────────────────────────
 const SKINFOLD_CONFIG = {
@@ -240,7 +240,7 @@ function PrintRow({ label, value, unit, kat, bold }) {
   );
 }
 
-export default function LabForm() {
+function LabForm() {
   const [step, setStep] = useState(0);
   const [d, setD] = useState({
     nama:"", nim:"", sex:"", usia:"", kelas:"",
@@ -515,3 +515,5 @@ export default function LabForm() {
     </>
   );
 }
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<LabForm />);
